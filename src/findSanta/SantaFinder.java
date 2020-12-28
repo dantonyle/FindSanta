@@ -28,7 +28,7 @@ public class SantaFinder {
 		System.out.println("Provide a first.lastname or email to search for: ");
 		Scanner scanner = new Scanner(System.in);
 		String searchFor = scanner.nextLine();
-		String searchFor1 = new String(searchFor.replaceFirst(" ", "."));  // Remove first space between first/last name
+		String searchFor1 = new String(searchFor.replaceFirst(" ", ".").toLowerCase());  // Remove first space between first/last name
 		String searchFor2 = new String(searchFor1.replaceAll(" ", ""));   // Remove all remaining space
 		
 		//System.out.println(searchFor2);
@@ -44,9 +44,9 @@ public class SantaFinder {
 		}
 		
 		if(foundMatch) {
-			System.out.println(printEmail + " email address does exist");
+			System.out.println(printEmail + " email address does exist in our system");
 		} else {
-			System.out.println(printEmail + " email address does not exist");
+			System.out.println(printEmail + " email address does not exist in our system");
 		}
 		
 	}
